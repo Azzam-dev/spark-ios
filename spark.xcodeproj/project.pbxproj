@@ -13,6 +13,9 @@
 		DB6D07EC272BAA8B000BE3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6D07EA272BAA8B000BE3DE /* Main.storyboard */; };
 		DB6D07EE272BAA8D000BE3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6D07ED272BAA8D000BE3DE /* Assets.xcassets */; };
 		DB6D07F1272BAA8D000BE3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6D07EF272BAA8D000BE3DE /* LaunchScreen.storyboard */; };
+		DB6D08A9272BB9B4000BE3DE /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB6D08A8272BB9B4000BE3DE /* PhoneNumberKit */; };
+		DB6D08AC272BCBDD000BE3DE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB6D08AB272BCBDD000BE3DE /* IQKeyboardManagerSwift */; };
+		DB6D08AE272BD326000BE3DE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D08AD272BD326000BE3DE /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		DB6D07ED272BAA8D000BE3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6D07F0272BAA8D000BE3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6D07F2272BAA8D000BE3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6D08AD272BD326000BE3DE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6D08A9272BB9B4000BE3DE /* PhoneNumberKit in Frameworks */,
+				DB6D08AC272BCBDD000BE3DE /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,7 @@
 				DB6D07E4272BAA8B000BE3DE /* AppDelegate.swift */,
 				DB6D07E6272BAA8B000BE3DE /* SceneDelegate.swift */,
 				DB6D07E8272BAA8B000BE3DE /* ViewController.swift */,
+				DB6D08AD272BD326000BE3DE /* GradientView.swift */,
 				DB6D07EA272BAA8B000BE3DE /* Main.storyboard */,
 				DB6D07ED272BAA8D000BE3DE /* Assets.xcassets */,
 				DB6D07EF272BAA8D000BE3DE /* LaunchScreen.storyboard */,
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = spark;
+			packageProductDependencies = (
+				DB6D08A8272BB9B4000BE3DE /* PhoneNumberKit */,
+				DB6D08AB272BCBDD000BE3DE /* IQKeyboardManagerSwift */,
+			);
 			productName = spark;
 			productReference = DB6D07E1272BAA8B000BE3DE /* spark.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = DB6D07D8272BAA8B000BE3DE;
+			packageReferences = (
+				DB6D08A7272BB9B4000BE3DE /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				DB6D08AA272BCBDD000BE3DE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = DB6D07E2272BAA8B000BE3DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +155,7 @@
 			files = (
 				DB6D07E9272BAA8B000BE3DE /* ViewController.swift in Sources */,
 				DB6D07E5272BAA8B000BE3DE /* AppDelegate.swift in Sources */,
+				DB6D08AE272BD326000BE3DE /* GradientView.swift in Sources */,
 				DB6D07E7272BAA8B000BE3DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +376,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB6D08A7272BB9B4000BE3DE /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		DB6D08AA272BCBDD000BE3DE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB6D08A8272BB9B4000BE3DE /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6D08A7272BB9B4000BE3DE /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+		DB6D08AB272BCBDD000BE3DE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6D08AA272BCBDD000BE3DE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB6D07D9272BAA8B000BE3DE /* Project object */;
 }
