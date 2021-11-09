@@ -19,6 +19,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var phoneNumberTF: PhoneNumberTextField!
     
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
         phoneNumberTF.withFlag = true
         phoneNumberTF.withDefaultPickerUI = true
