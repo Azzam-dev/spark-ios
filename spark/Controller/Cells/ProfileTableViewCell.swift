@@ -8,16 +8,19 @@
 import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var logo: DesignableImage!
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+    
+    func configure(course: Course) {
+        title.text = course.title
+        price.text = String(course.price.rawValue)
+//        if let imageURL = URL(string: course.imageURL ?? "" ) {
+//            self.logo.af.setImage(withURL: imageURL)
+//        }
+        date.text = course.date
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

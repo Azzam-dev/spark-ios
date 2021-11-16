@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2E965227446F1B00C90BCE /* RevealingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E965127446F1B00C90BCE /* RevealingSplashView.swift */; };
 		DB44385E273994860073235F /* SwipeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB44385D273994850073235F /* SwipeNavigationController.swift */; };
+		DB602B3F2744087F00534877 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B3E2744087F00534877 /* User.swift */; };
+		DB602B412744088C00534877 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B402744088C00534877 /* Chat.swift */; };
+		DB602B432744089800534877 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B422744089800534877 /* Message.swift */; };
+		DB602B452744097E00534877 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B442744097E00534877 /* Receipt.swift */; };
+		DB602B4A2744215F00534877 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B492744215F00534877 /* AuthService.swift */; };
+		DB602B4C2744220600534877 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB602B4B2744220600534877 /* DataService.swift */; };
 		DB6D07E5272BAA8B000BE3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D07E4272BAA8B000BE3DE /* AppDelegate.swift */; };
 		DB6D07E7272BAA8B000BE3DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D07E6272BAA8B000BE3DE /* SceneDelegate.swift */; };
 		DB6D07E9272BAA8B000BE3DE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D07E8272BAA8B000BE3DE /* LoginVC.swift */; };
@@ -24,6 +31,8 @@
 		DB72227C27329E9B00D5DCFB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB72227B27329E9B00D5DCFB /* FirebaseFirestore */; };
 		DB72227E27329E9B00D5DCFB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB72227D27329E9B00D5DCFB /* FirebaseStorage */; };
 		DB72FF84272EE38E004D3704 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72FF83272EE38E004D3704 /* MainExtensions.swift */; };
+		DB80C103273BE1E4002030BE /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80C102273BE1E4002030BE /* CourseTableViewCell.swift */; };
+		DB80C107273BEA0D002030BE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80C106273BEA0D002030BE /* Course.swift */; };
 		DB884F8B273A63A300883399 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB884F8A273A63A300883399 /* HomeVC.swift */; };
 		DB884F8D273A63B800883399 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB884F8C273A63B800883399 /* ExploreVC.swift */; };
 		DB884F8F273A63C800883399 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB884F8E273A63C800883399 /* PostVC.swift */; };
@@ -31,11 +40,20 @@
 		DB884F93273A63EA00883399 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB884F92273A63EA00883399 /* ProfileVC.swift */; };
 		DB884F96273A64FE00883399 /* SparkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB884F95273A64FE00883399 /* SparkingCell.swift */; };
 		DB9B911F272F120C0085C60C /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B911E272F120C0085C60C /* NavigationVC.swift */; };
+		DBA91C63273C0A9300A5AA05 /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA91C62273C0A9300A5AA05 /* CourseVC.swift */; };
 		DBDD7169273AEFCC00EC8A8C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD7168273AEFCC00EC8A8C /* ProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB2E9650274454E300C90BCE /* spark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = spark.entitlements; sourceTree = "<group>"; };
+		DB2E965127446F1B00C90BCE /* RevealingSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealingSplashView.swift; sourceTree = "<group>"; };
 		DB44385D273994850073235F /* SwipeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeNavigationController.swift; sourceTree = "<group>"; };
+		DB602B3E2744087F00534877 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB602B402744088C00534877 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		DB602B422744089800534877 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		DB602B442744097E00534877 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		DB602B492744215F00534877 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DB602B4B2744220600534877 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DB6D07E1272BAA8B000BE3DE /* spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6D07E4272BAA8B000BE3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6D07E6272BAA8B000BE3DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +65,8 @@
 		DB6D08AD272BD326000BE3DE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DB722272273299C700D5DCFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB72FF83272EE38E004D3704 /* MainExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
+		DB80C102273BE1E4002030BE /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		DB80C106273BEA0D002030BE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		DB884F8A273A63A300883399 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DB884F8C273A63B800883399 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
 		DB884F8E273A63C800883399 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
@@ -54,6 +74,7 @@
 		DB884F92273A63EA00883399 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		DB884F95273A64FE00883399 /* SparkingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkingCell.swift; sourceTree = "<group>"; };
 		DB9B911E272F120C0085C60C /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		DBA91C62273C0A9300A5AA05 /* CourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
 		DBDD7168273AEFCC00EC8A8C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +105,22 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		DB602B3D2744075E00534877 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB602B492744215F00534877 /* AuthService.swift */,
+				DB602B4B2744220600534877 /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB602B482744143E00534877 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		DB6D07D8272BAA8B000BE3DE = {
 			isa = PBXGroup;
 			children = (
@@ -103,26 +140,51 @@
 		DB6D07E3272BAA8B000BE3DE /* spark */ = {
 			isa = PBXGroup;
 			children = (
+				DB2E9650274454E300C90BCE /* spark.entitlements */,
 				DB6D07E4272BAA8B000BE3DE /* AppDelegate.swift */,
 				DB6D07E6272BAA8B000BE3DE /* SceneDelegate.swift */,
+				DB80C104273BE9C7002030BE /* Model */,
+				DB80C105273BE9D9002030BE /* View */,
 				DB9B911D272F11DF0085C60C /* Controller */,
-				DB72FF82272EE37A004D3704 /* ِِِExtensions */,
-				DB6D07EA272BAA8B000BE3DE /* Main.storyboard */,
+				DB602B3D2744075E00534877 /* Service */,
+				DB72FF82272EE37A004D3704 /* ِExtensions */,
 				DB6D07ED272BAA8D000BE3DE /* Assets.xcassets */,
-				DB6D07EF272BAA8D000BE3DE /* LaunchScreen.storyboard */,
 				DB6D07F2272BAA8D000BE3DE /* Info.plist */,
 				DB722272273299C700D5DCFB /* GoogleService-Info.plist */,
 			);
 			path = spark;
 			sourceTree = "<group>";
 		};
-		DB72FF82272EE37A004D3704 /* ِِِExtensions */ = {
+		DB72FF82272EE37A004D3704 /* ِExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				DB2E965127446F1B00C90BCE /* RevealingSplashView.swift */,
 				DB6D08AD272BD326000BE3DE /* GradientView.swift */,
 				DB72FF83272EE38E004D3704 /* MainExtensions.swift */,
 			);
-			path = "ِِِExtensions";
+			path = "ِExtensions";
+			sourceTree = "<group>";
+		};
+		DB80C104273BE9C7002030BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB80C106273BEA0D002030BE /* Course.swift */,
+				DB602B3E2744087F00534877 /* User.swift */,
+				DB602B402744088C00534877 /* Chat.swift */,
+				DB602B422744089800534877 /* Message.swift */,
+				DB602B442744097E00534877 /* Receipt.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB80C105273BE9D9002030BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB6D07EA272BAA8B000BE3DE /* Main.storyboard */,
+				DB6D07EF272BAA8D000BE3DE /* LaunchScreen.storyboard */,
+				DB602B482744143E00534877 /* xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DB884F94273A64AF00883399 /* Cells */ = {
@@ -130,6 +192,7 @@
 			children = (
 				DB884F95273A64FE00883399 /* SparkingCell.swift */,
 				DBDD7168273AEFCC00EC8A8C /* ProfileTableViewCell.swift */,
+				DB80C102273BE1E4002030BE /* CourseTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -143,6 +206,7 @@
 				DB884F8E273A63C800883399 /* PostVC.swift */,
 				DB884F90273A63D600883399 /* FavouriteVC.swift */,
 				DB884F92273A63EA00883399 /* ProfileVC.swift */,
+				DBA91C62273C0A9300A5AA05 /* CourseVC.swift */,
 				DB884F94273A64AF00883399 /* Cells */,
 				DB44385F273994900073235F /* Navigation */,
 			);
@@ -237,18 +301,28 @@
 			files = (
 				DB884F93273A63EA00883399 /* ProfileVC.swift in Sources */,
 				DBDD7169273AEFCC00EC8A8C /* ProfileTableViewCell.swift in Sources */,
+				DB602B412744088C00534877 /* Chat.swift in Sources */,
 				DB9B911F272F120C0085C60C /* NavigationVC.swift in Sources */,
 				DB884F8B273A63A300883399 /* HomeVC.swift in Sources */,
+				DB602B4C2744220600534877 /* DataService.swift in Sources */,
+				DB602B4A2744215F00534877 /* AuthService.swift in Sources */,
+				DB2E965227446F1B00C90BCE /* RevealingSplashView.swift in Sources */,
 				DB6D07E9272BAA8B000BE3DE /* LoginVC.swift in Sources */,
 				DB884F8D273A63B800883399 /* ExploreVC.swift in Sources */,
 				DB884F8F273A63C800883399 /* PostVC.swift in Sources */,
 				DB72FF84272EE38E004D3704 /* MainExtensions.swift in Sources */,
+				DB602B452744097E00534877 /* Receipt.swift in Sources */,
+				DB80C107273BEA0D002030BE /* Course.swift in Sources */,
 				DB6D07E5272BAA8B000BE3DE /* AppDelegate.swift in Sources */,
 				DB884F91273A63D600883399 /* FavouriteVC.swift in Sources */,
+				DBA91C63273C0A9300A5AA05 /* CourseVC.swift in Sources */,
 				DB6D08AE272BD326000BE3DE /* GradientView.swift in Sources */,
 				DB884F96273A64FE00883399 /* SparkingCell.swift in Sources */,
+				DB602B3F2744087F00534877 /* User.swift in Sources */,
 				DB6D07E7272BAA8B000BE3DE /* SceneDelegate.swift in Sources */,
+				DB602B432744089800534877 /* Message.swift in Sources */,
 				DB44385E273994860073235F /* SwipeNavigationController.swift in Sources */,
+				DB80C103273BE1E4002030BE /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = spark/spark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
@@ -425,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = spark/spark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;

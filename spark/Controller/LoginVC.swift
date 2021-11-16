@@ -17,6 +17,10 @@ class LoginVC: UIViewController {
     @IBOutlet var planets: [UIImageView]!
     
     @IBOutlet weak var phoneNumberTF: PhoneNumberTextField!
+    @IBOutlet weak var phoneNumberStackView: UIStackView!
+    
+    @IBOutlet weak var verifyCodeTF: UITextField!
+    @IBOutlet weak var verificationCodeStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,49 @@ class LoginVC: UIViewController {
 
     }
 
+    @IBAction func didPressSendCodeButton(_ sender: Any) {
+        guard let nationalNumber = phoneNumberTF.phoneNumber?.nationalNumber else { return }
+        guard let countryCode = phoneNumberTF.phoneNumber?.countryCode else { return }
+        let phoneNumber = "+\(countryCode)\(nationalNumber)"
+        
+        AuthService.instance.verifyPhoneNumber(phoneNumber) { verificationID, error in
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+            self.verificationCodeStackView.isHidden = false
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.phoneNumberStackView.alpha = 0
+                self.verificationCodeStackView.alpha = 1
+            } completion: { [self] _ in
+                self.phoneNumberStackView.isHidden = true
+                
+            }
 
+        }
+    }
+    
+    @IBAction func didPressBackButton(_ sender: Any) {
+        self.phoneNumberStackView.isHidden = false
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.phoneNumberStackView.alpha = 1
+            self.verificationCodeStackView.alpha = 0
+        } completion: { [self] _ in
+            self.verificationCodeStackView.isHidden = true
+
+        }
+    }
+    
+    @IBAction func didPressVerifyButton(_ sender: Any) {
+        guard let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") else { return }
+        guard let smsCode = verifyCodeTF.text else { return }
+        
+        AuthService.instance.loginUser(withVerificationID: verificationID, andSmsCode: smsCode) { status,error in
+            if status {
+                //open homeVC
+                print("dismissing***")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                //present error alert
+            }
+        }
+    }
 }
 

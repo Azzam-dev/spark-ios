@@ -8,7 +8,15 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
+    let myCoursesArray = [
+        
+        Course(key: "1", title: "firebase 101", logoURL: "", price: .free, date: "Wednesday, 10 November 2021", time: "4:00 PM - 8:00 PM"),
+        Course(key: "2", title: "Swift 101", logoURL: "", price: .free, date: "Wednesday, 11 November 2021", time: "4:00 PM - 8:00 PM"),
+        Course(key: "3", title: "Kotlin 101", logoURL: "", price: .free, date: "Wednesday, 12 November 2021", time: "4:00 PM - 8:00 PM")
+    
+    ]
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet var planets: [UIImageView]!
@@ -35,13 +43,13 @@ class ProfileVC: UIViewController {
 
 extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return myCoursesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else { return UITableViewCell() }
-        
+        cell.configure(course: myCoursesArray[indexPath.row])
         return cell
     }
     

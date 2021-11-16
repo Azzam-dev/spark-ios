@@ -28,7 +28,18 @@ class NavigationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubNavigationControllers()
+        showSplashAnimation()
         // Do any additional setup after loading the view.
+    }
+    
+    //this is used for the revealing splash animtion
+    let revealingSplashView = RevealingSplashView(iconImage: UIImage(named : "RingPlanet" )!, iconInitialSize: CGSize(width: 150, height: 150) , backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) )
+    
+    func showSplashAnimation() {
+        //this is the revealing splash animation
+        self.view.addSubview(revealingSplashView)
+        revealingSplashView.animationType = .popAndZoomOut
+        revealingSplashView.startAnimation()
     }
     
     func setupSubNavigationControllers() {
