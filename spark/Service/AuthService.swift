@@ -42,6 +42,18 @@ class AuthService {
         
     }
     
+    
+    func logoutUser(completion: (_ status: Bool) -> () ) {
+        do {
+            try Auth.auth().signOut()
+            
+            completion(true)
+        } catch {
+            completion(false)
+            print("something went wrong")
+        }
+    }
+    
     func checkCurrentUserStatus() -> Bool {
         if Auth.auth().currentUser == nil {
             return false

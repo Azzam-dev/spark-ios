@@ -39,6 +39,43 @@ class ProfileVC: UIViewController {
             self.planets[0].frame.origin.y += 25
         }
     }
+    
+
+    
+    func logoutAlert() {
+        let logoutPopup = UIAlertController(title: "تسجيل الخروج", message: "هل تريد تسجيل الخروج ؟", preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: "نعم", style: .destructive ) { (buttonTapped) in
+            AuthService.instance.logoutUser { status in
+                if status {
+                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+                    loginVC.modalPresentationStyle = .fullScreen
+                    self.present(loginVC, animated: true, completion: nil)
+                } else {
+                    //something went wrong
+                }
+            }
+        }
+        let cancel = UIAlertAction(title: "لا", style: .cancel, handler: nil)
+        logoutPopup.addAction(logoutAction)
+        logoutPopup.addAction(cancel)
+        
+        
+        if let popoverController = logoutPopup.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        
+        self.present(logoutPopup, animated: true , completion: nil)
+        
+    }
+    @IBAction func didPressMoreButton(_ sender: Any) {
+        logoutAlert()
+    }
+    
+    
+    
 }
 
 extension ProfileVC: UITableViewDelegate, UITableViewDataSource {

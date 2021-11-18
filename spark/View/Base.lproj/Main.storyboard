@@ -1104,7 +1104,7 @@
         <!--ProfileVC-->
         <scene sceneID="xd3-gk-yxY">
             <objects>
-                <viewController id="k0x-Q5-RDZ" customClass="ProfileVC" customModule="spark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="k0x-Q5-RDZ" customClass="ProfileVC" customModule="spark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kf-sA-7od">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1274,13 +1274,16 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-Jx-XIa">
-                                                <rect key="frame" x="308.33333333333331" y="6.3333333333333357" width="79.666666666666686" height="37.666666666666664"/>
+                                                <rect key="frame" x="308.33333333333331" y="10.666666666666671" width="79.666666666666686" height="29"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <imageReference key="image" image="ellipsis" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="power" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressMoreButton:" destination="k0x-Q5-RDZ" eventType="touchUpInside" id="Z3M-NA-1l7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1572,12 +1575,12 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.up.square" catalog="system" width="128" height="114"/>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="firebase" width="400" height="300"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="power" catalog="system" width="128" height="124"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="sparkCoursImage" width="3024" height="4032"/>
         <image name="sparkles" catalog="system" width="112" height="128"/>
