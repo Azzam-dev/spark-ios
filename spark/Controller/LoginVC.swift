@@ -28,6 +28,16 @@ class LoginVC: UIViewController {
         phoneNumberTF.withFlag = true
         phoneNumberTF.withDefaultPickerUI = true
         phoneNumberTF.withExamplePlaceholder = true
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        waveShapesAnimation()
+    }
+    
+    
+    func waveShapesAnimation() {
         waveShapes[0].tintColor = #colorLiteral(red: 1, green: 0.6761596203, blue: 0, alpha: 1)
         waveShapes[1].tintColor = #colorLiteral(red: 1, green: 0.6761596203, blue: 0, alpha: 1)
         waveShapes[2].tintColor = #colorLiteral(red: 1, green: 0.6593478322, blue: 0, alpha: 1)
@@ -42,9 +52,8 @@ class LoginVC: UIViewController {
                 shape.frame.origin.y += [5,10,15].shuffled().first!
             }
         }
-
     }
-
+    
     @IBAction func didPressSendCodeButton(_ sender: Any) {
         guard let nationalNumber = phoneNumberTF.phoneNumber?.nationalNumber else { return }
         guard let countryCode = phoneNumberTF.phoneNumber?.countryCode else { return }
