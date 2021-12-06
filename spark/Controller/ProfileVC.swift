@@ -17,12 +17,18 @@ class ProfileVC: UIViewController {
     
     ]
     
+    @IBOutlet weak var usernameLBL: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet var planets: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DataService.instance.getUserData { user in
+            guard let user = user else { return }
+            self.usernameLBL.text = user.username
+        }
         tableView.contentInset.top = 60
         tableView.contentInset.bottom = 60
         

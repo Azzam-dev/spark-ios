@@ -34,7 +34,6 @@ class AuthService {
                 print(error.localizedDescription)
                 completion(false, error)
             } else {
-                print(authResult?.user.uid)
                 completion(true, nil)
             }
         }
@@ -42,7 +41,7 @@ class AuthService {
         
     }
     
-    
+    // use this function to logout the user
     func logoutUser(completion: (_ status: Bool) -> () ) {
         do {
             try Auth.auth().signOut()
@@ -50,10 +49,12 @@ class AuthService {
             completion(true)
         } catch {
             completion(false)
-            print("something went wrong")
         }
     }
     
+    
+    // use this function to get the user authentication status
+    // true if the user is loged-in and false if he is not loged-in
     func checkCurrentUserStatus() -> Bool {
         if Auth.auth().currentUser == nil {
             return false

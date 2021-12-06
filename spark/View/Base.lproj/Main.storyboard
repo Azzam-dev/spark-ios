@@ -1809,6 +1809,7 @@
                     <navigationItem key="navigationItem" id="D2U-DW-95H"/>
                     <connections>
                         <outlet property="tableView" destination="mgj-l3-Ybr" id="Z7x-HD-dK4"/>
+                        <outlet property="usernameLBL" destination="oDk-JC-sIR" id="Hn5-2o-tYA"/>
                         <outletCollection property="planets" destination="Fc1-3t-4ap" collectionClass="NSMutableArray" id="3hr-GR-lgg"/>
                         <outletCollection property="planets" destination="lHO-c9-dPb" collectionClass="NSMutableArray" id="g8L-cg-Vtu"/>
                         <outletCollection property="planets" destination="j3l-Px-qiP" collectionClass="NSMutableArray" id="JaK-84-c3k"/>
@@ -1835,6 +1836,12 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="3Gn-nI-Deh">
+            <size key="intrinsicContentSize" width="318" height="317"/>
+        </designable>
+        <designable name="6xO-Jy-Pwq">
+            <size key="intrinsicContentSize" width="915" height="915"/>
+        </designable>
         <designable name="Ac0-my-0vK">
             <size key="intrinsicContentSize" width="150" height="150"/>
         </designable>
@@ -1847,6 +1854,9 @@
         <designable name="UGt-z3-kMx">
             <size key="intrinsicContentSize" width="915" height="915"/>
         </designable>
+        <designable name="ZaZ-mY-nu8">
+            <size key="intrinsicContentSize" width="249" height="264"/>
+        </designable>
         <designable name="csC-rC-vdF">
             <size key="intrinsicContentSize" width="19" height="20.333333333333332"/>
         </designable>
@@ -1858,6 +1868,9 @@
         </designable>
         <designable name="tyB-XC-cH8">
             <size key="intrinsicContentSize" width="24.666666666666668" height="20.333333333333332"/>
+        </designable>
+        <designable name="ucU-bk-vSz">
+            <size key="intrinsicContentSize" width="1024" height="966"/>
         </designable>
         <designable name="w6V-mu-tfy">
             <size key="intrinsicContentSize" width="400" height="300"/>

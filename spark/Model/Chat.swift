@@ -23,6 +23,7 @@ class Chat {
     init(name: String, messages: [Message]) {
         _name = name
         _messages = messages
+        
     }
     
 }
