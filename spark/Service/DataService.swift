@@ -23,6 +23,7 @@ class DataService {
     
     private var _refAppData = realtimeDB.child("appData")
     private var _refMinimumVersion = realtimeDB.child("appData").child("minimumVersion-ios")
+    
     private var _refUsers = realtimeDB.child("users")
     private var _refCourses = realtimeDB.child("courses")
     
@@ -45,9 +46,18 @@ class DataService {
     // read and write functions
     
     // this is a write function that updates the user data
-    func updateUserData(userData: [String: Any]) {
+    func updateUserData(userData: [String: Any], handler: @escaping ( _ error: Error?) -> () ) {
         guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
-        refUsers.child(currentUserUID).updateChildValues(userData)
+        refUsers.child(currentUserUID).updateChildValues(userData) { error, _ in
+            handler(error)
+        }
+    }
+    
+    func isRegistered(handler: @escaping ( _ state: Bool) -> ()) {
+        guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
+        refUsers.child(currentUserUID).observeSingleEvent(of: .value) { userDataSnapshot in
+            handler(userDataSnapshot.exists())
+        }
     }
     
     func getUserData(handler: @escaping ( _ user: User?) -> () ) {

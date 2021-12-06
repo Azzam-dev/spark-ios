@@ -91,12 +91,24 @@ class LoginVC: UIViewController {
         AuthService.instance.loginUser(withVerificationID: verificationID, andSmsCode: smsCode) { status,error in
             if status {
                 //open homeVC
-                print("dismissing***")
-                self.dismiss(animated: true, completion: nil)
+                DataService.instance.isRegistered { state in
+                    if state {
+                        print("dismissing***")
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print("Present registration view controller")
+                        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                        let registrationVC = storyboard.instantiateViewController(withIdentifier: "RegistrationVC")
+                        self.present(registrationVC, animated: true, completion: nil)
+                    }
+                }
+                
             } else {
                 //present error alert
             }
         }
     }
+    
+    
 }
 

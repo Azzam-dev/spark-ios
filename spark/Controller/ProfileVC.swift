@@ -22,13 +22,18 @@ class ProfileVC: UIViewController {
     
     @IBOutlet var planets: [UIImageView]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         DataService.instance.getUserData { user in
             guard let user = user else { return }
             self.usernameLBL.text = user.username
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         tableView.contentInset.top = 60
         tableView.contentInset.bottom = 60
         

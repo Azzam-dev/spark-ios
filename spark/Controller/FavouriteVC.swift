@@ -12,7 +12,7 @@ class FavouriteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataService.instance.updateUserData(userData: ["username": "azzam.rar"])
+        
         // Do any additional setup after loading the view.
     }
     
