@@ -67,5 +67,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         return tableView.dequeueReusableCell(withIdentifier: "SquareCourseCell", for: indexPath) as! SquareCourseCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let courseVC = storyboard.instantiateViewController(withIdentifier: "CourseVC")
+        navigationController?.pushViewController(courseVC, animated: true)
+    }
     
 }

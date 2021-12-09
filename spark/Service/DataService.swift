@@ -60,6 +60,16 @@ class DataService {
         }
     }
     
+    func getUserCreationDate() -> String? {
+        guard let creationDate = Auth.auth().currentUser?.metadata.creationDate else { return nil }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        
+        return dateFormatter.string(from: creationDate)
+    }
+    
+    
     func getUserData(handler: @escaping ( _ user: User?) -> () ) {
         guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
         refUsers.child(currentUserUID).observe(.value) { userDataSnapshot in

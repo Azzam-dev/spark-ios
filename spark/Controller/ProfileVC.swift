@@ -17,7 +17,10 @@ class ProfileVC: UIViewController {
     
     ]
     
-    @IBOutlet weak var usernameLBL: UILabel!
+    @IBOutlet var usernameLabels: [UILabel]!
+    
+    @IBOutlet var userUIDs: [UILabel]!
+    @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet var planets: [UIImageView]!
@@ -27,17 +30,28 @@ class ProfileVC: UIViewController {
         
         DataService.instance.getUserData { user in
             guard let user = user else { return }
-            self.usernameLBL.text = user.username
+            for username in self.usernameLabels {
+                username.text = user.username
+            }
+            for userUID in self.userUIDs {
+                userUID.text = String(user.uid.suffix(4))
+            }
+            
         }
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dateLBL.text = DataService.instance.getUserCreationDate()
         tableView.contentInset.top = 60
         tableView.contentInset.bottom = 60
         
     }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -99,6 +113,12 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else { return UITableViewCell() }
         cell.configure(course: myCoursesArray[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let courseVC = storyboard.instantiateViewController(withIdentifier: "CourseVC")
+        navigationController?.pushViewController(courseVC, animated: true)
     }
     
     
