@@ -55,6 +55,7 @@ class RegistrationVC: UIViewController {
                     "birthDate": formattedDate,
                     "type": userType.selectedSegmentIndex
                 ]
+                
                 DataService.instance.updateUserData(userData: userData) { error in
                     if let error = error {
                         print(error.localizedDescription)

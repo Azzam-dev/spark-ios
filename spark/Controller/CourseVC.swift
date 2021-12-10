@@ -9,12 +9,12 @@ import UIKit
 
 class CourseVC: UIViewController {
 
-    @IBOutlet weak var courseTitle: UILabel!
+    @IBOutlet weak var courseTitleLBL: UILabel!
+    var courseTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        courseTitle.text = "Swift 101"
+        courseTitleLBL.text = courseTitle
     }
     
 

@@ -37,6 +37,15 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let courseVC = storyboard.instantiateViewController(withIdentifier: "CourseVC") as! CourseVC
+        
+        navigationController?.pushViewController(courseVC, animated: true)
+        
+        
+    }
+    
     
     
 }

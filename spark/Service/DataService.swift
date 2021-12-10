@@ -78,7 +78,13 @@ class DataService {
                 handler(user)
             }
         }
-
+    }
+    
+    //course functions
+    func postCourse(withValues courseData: [String: Any], handler: @escaping ( _ error: Error?) -> ()) {
+        refCourses.childByAutoId().updateChildValues(courseData) { error, _ in
+            handler(error)
+        }
     }
     
 }

@@ -52,4 +52,27 @@ class PostVC: UIViewController {
         imageTransitionAnimation(direction: sender.direction)
     }
     
+    
+    @IBAction func didPressPostButton(_ sender: Any) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let formattedDate = dateFormatter.string(from: Date())
+        
+        let courseData: [String : Any] = [
+            "title": "Spark 101",
+            "date": formattedDate,
+            "price": Int.random(in: 0...1_000_000)
+        ]
+        
+        DataService.instance.postCourse(withValues: courseData) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("✅")
+            }
+            
+        }
+    }
+    
 }
